@@ -126,7 +126,7 @@ CustomFunctions.associate("WORKINGDAYS", workingDays);
  * @param operands A number (such as 1 or 3.1415), a cell address (such as A1 or $E$11), or a range of cell addresses (such as B3:F12)
  * @returns {number}
  */
-function add2(operand) {
+function add2(operands) {
   let total = 0;
 
   operands.forEach(range => {
