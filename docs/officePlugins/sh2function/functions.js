@@ -58,6 +58,6 @@ CustomFunctions.associate("ADD", (function (n, t) {
       }
       return [days,wdays];
     }else{
-      threw new CustomFunctions.Error(CustomFunctions.ErrorCode.invalidValue, "Please provide a valid start date in the form of YYYYMMDD.");
+      threw (new CustomFunctions.Error(CustomFunctions.ErrorCode.invalidValue, "Please provide a valid start date in the form of YYYYMMDD."));
     }
 }));
