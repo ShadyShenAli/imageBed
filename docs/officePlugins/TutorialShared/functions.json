@@ -109,11 +109,16 @@
             "name": "ADD2",
             "parameters": [
                 {
-                    "name": "operand",
-                    "type": "any"
+                    "description": "A number (such as 1 or 3.1415), a cell address (such as A1 or $E$11), or a range of cell addresses (such as B3:F12)",
+                    "dimensionality": "matrix",
+                    "name": "operands",
+                    "repeating": true,
+                    "type": "number"
                 }
             ],
-            "result": {}
+            "result": {
+                "type": "number"
+            }
         },
         {
             "description": "Calculates the sum of the specified numbers",
@@ -176,7 +181,9 @@
                     "type": "number"
                 }
             ],
-            "result": {}
+            "result": {
+                "type": "string"
+            }
         },
         {
             "description": "Return the addresses of three parameters.",
@@ -205,6 +212,21 @@
             "result": {
                 "dimensionality": "matrix",
                 "type": "string"
+            }
+        },
+        {
+            "id": "ADDSINGLEVALUE",
+            "name": "ADDSINGLEVALUE",
+            "parameters": [
+                {
+                    "description": "An array of numbers that are repeating parameters.",
+                    "name": "singleValue",
+                    "repeating": true,
+                    "type": "number"
+                }
+            ],
+            "result": {
+                "type": "number"
             }
         }
     ]
