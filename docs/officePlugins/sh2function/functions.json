@@ -83,7 +83,7 @@
             },{
                 "description" : "number of weeks",
                 "name" : "weeks",
-                "type" : integer
+                "type" : "number"
             }],
             "result" : {
                 "type" : "string",
