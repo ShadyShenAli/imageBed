@@ -33,7 +33,7 @@
             }
         },
         {
-            "description": "Increments a value once a second.",
+            "description": "Increments the cell with a given amount at a specified interval in milliseconds.",
             "id": "INCREMENT",
             "name": "INCREMENT",
             "options": {
@@ -41,8 +41,13 @@
             },
             "parameters": [
                 {
-                    "description": "Amount to increment",
-                    "name": "incrementBy",
+                    "description": "The amount to add to the cell value on each increment.",
+                    "name": "amount",
+                    "type": "number"
+                },
+                {
+                    "description": "The time in milliseconds to wait before the next increment on the cell.",
+                    "name": "interval",
                     "type": "number"
                 }
             ],
@@ -51,43 +56,155 @@
             }
         },
         {
-            "description": "Writes a message to console.log().",
+            "description": "Writes a message to console.log()",
             "id": "LOG",
             "name": "LOG",
             "parameters": [
                 {
-                    "description": "String to write.",
-                    "name": "message",
+                    "description": "message to log",
+                    "name": "n",
                     "type": "string"
                 }
             ],
-            "result": {}
+            "result": {
+                "type": "string"
+            }
         },
         {
-            "description": "Simulates rolling a 6-sided dice.",
+            "description": "Simulates rolling a 6-sided dice",
             "id": "ROLL6SIDED",
             "name": "ROLL6SIDED",
             "options": {
                 "volatile": true
             },
             "parameters": [],
+            "result": {
+                "type": "number"
+            }
+        },
+        {
+            "description": "list working days",
+            "id": "WORKINGDAYS",
+            "name": "WORKINGDAYS",
+            "parameters": [
+                {
+                    "description": "Start Date String in YYYYMMDD format",
+                    "name": "start",
+                    "type": "string"
+                },
+                {
+                    "description": "number of weeks to display",
+                    "name": "week",
+                    "type": "number"
+                }
+            ],
+            "result": {
+                "dimensionality": "matrix",
+                "type": "string"
+            }
+        },
+        {
+            "description": "The sum of all of the numbers.",
+            "id": "ADD2",
+            "name": "ADD2",
+            "parameters": [
+                {
+                    "name": "operand",
+                    "type": "any"
+                }
+            ],
             "result": {}
-        },{
-            "description" : "list working days",
-            "id" : "WORKINGDAYS",
-            "name" : "WORKINGDAYS",
-            "parameters" : [{
-                "description" : "Start Date String YYYYMMDD",
-                "name" : "start",
-                "type" : "string"
-            },{
-                "description" : "number of weeks",
-                "name" : "weeks",
-                "type" : "number"
-            }],
-            "result" : {
-                "type" : "string",
-                "dimensionality" : "matrix"
+        },
+        {
+            "description": "Calculates the sum of the specified numbers",
+            "id": "ADD3",
+            "name": "ADD3",
+            "parameters": [
+                {
+                    "description": "First number.",
+                    "name": "first",
+                    "type": "number"
+                },
+                {
+                    "description": "Second number.",
+                    "name": "second",
+                    "type": "number"
+                },
+                {
+                    "description": "Third number to add. If omitted, third = 0.",
+                    "name": "third",
+                    "optional": true,
+                    "type": "number"
+                }
+            ],
+            "result": {
+                "type": "number"
+            }
+        },
+        {
+            "description": "Returns the second highest value in a matrixed range of values.",
+            "id": "SECONDHIGHEST",
+            "name": "SECONDHIGHEST",
+            "parameters": [
+                {
+                    "description": "Multiple ranges of values.",
+                    "dimensionality": "matrix",
+                    "name": "values",
+                    "type": "number"
+                }
+            ],
+            "result": {
+                "type": "number"
+            }
+        },
+        {
+            "description": "Return the address of the cell that invoked the custom function.",
+            "id": "GETADDRESS",
+            "name": "GETADDRESS",
+            "options": {
+                "requiresAddress": true
+            },
+            "parameters": [
+                {
+                    "description": "First parameter.",
+                    "name": "first",
+                    "type": "number"
+                },
+                {
+                    "description": "Second parameter.",
+                    "name": "second",
+                    "type": "number"
+                }
+            ],
+            "result": {}
+        },
+        {
+            "description": "Return the addresses of three parameters.",
+            "id": "GETPARAMETERADDRESSES",
+            "name": "GETPARAMETERADDRESSES",
+            "options": {
+                "requiresParameterAddresses": true
+            },
+            "parameters": [
+                {
+                    "description": "First parameter.",
+                    "name": "firstParameter",
+                    "type": "string"
+                },
+                {
+                    "description": "Second parameter.",
+                    "name": "secondParameter",
+                    "type": "string"
+                },
+                {
+                    "description": "Third parameter.",
+                    "name": "thirdParameter",
+                    "type": "string"
+                }
+            ],
+            "result": {
+                "dimensionality": "matrix",
+                "type": "string"
             }
         }
     ]
