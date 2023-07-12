@@ -191,7 +191,7 @@ CustomFunctions.associate("SECONDHIGHEST",secondHighest);
  * @requiresAddress
  */
 function getAddress(first, second, invocation) {
-  console.log(JSON.stringify(innovation, null, "  "));
+  console.log(JSON.stringify(invocation, null, "  "));
   const address = invocation.address;
   return address;
 }
