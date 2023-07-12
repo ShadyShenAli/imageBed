@@ -78,11 +78,11 @@
             "name" : "WORKINGDAYS",
             "parameters" : [{
                 "description" : "Start Date String YYYYMMDD",
-                "name" : "start date",
+                "name" : "start",
                 "type" : "string"
             },{
                 "description" : "number of weeks",
-                "name" : "# of weeks",
+                "name" : "weeks",
                 "type" : integer
             }],
             "result" : {
