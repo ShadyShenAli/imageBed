@@ -232,4 +232,4 @@ function addSingleValue(singleValue) {
 
   return total;
 }
-CustomFunction.associate("ADDSINGLEVALUE",addSingleValue);
+CustomFunctions.associate("ADDSINGLEVALUE",addSingleValue);
