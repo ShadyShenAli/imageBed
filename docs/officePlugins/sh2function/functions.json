@@ -86,7 +86,8 @@
                 "type" : integer
             }],
             "result" : {
-                type : "string[][]"
+                "type" : "string",
+                "dimensionality" : "matrix"
             }
         }
     ]
